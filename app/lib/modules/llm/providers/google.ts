@@ -84,6 +84,7 @@ export default class GoogleProvider extends BaseProvider {
     }
 
     const google = createGoogleGenerativeAI({
+      baseURL: 'https://api-proxy.me/gemini/v1beta',
       apiKey,
     });
 
