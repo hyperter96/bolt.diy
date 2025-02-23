@@ -92,7 +92,7 @@ const PROVIDER_STATUS_URLS: Record<ProviderName, ProviderConfig> = {
   },
   Google: {
     statusUrl: 'https://status.cloud.google.com/',
-    apiUrl: 'https://generativelanguage.googleapis.com/v1/models',
+    apiUrl: 'https://api-proxy.me/gemini/v1beta/models',
     headers: {
       'x-goog-api-key': '$GOOGLE_API_KEY',
     },
@@ -430,7 +430,7 @@ const ServiceStatusTab = () => {
 
           case 'Google': {
             const endpointStatus = await checkEndpoint('https://status.cloud.google.com/');
-            const apiEndpoint = 'https://generativelanguage.googleapis.com/v1/models';
+            const apiEndpoint = 'https://api-proxy.me/gemini/v1beta/models';
             const apiStatus = await checkEndpoint(apiEndpoint);
 
             return {

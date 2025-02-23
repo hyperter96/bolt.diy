@@ -44,7 +44,7 @@ export class GoogleStatusChecker extends BaseProviderChecker {
       // If status page check fails, fallback to endpoint check
       if (!statusPageResponse.ok) {
         const endpointStatus = await this.checkEndpoint('https://status.cloud.google.com/');
-        const apiEndpoint = 'https://generativelanguage.googleapis.com/v1/models';
+        const apiEndpoint = 'https://api-proxy.me/gemini/v1beta/models';
         const apiStatus = await this.checkEndpoint(apiEndpoint);
 
         return {
@@ -64,7 +64,7 @@ export class GoogleStatusChecker extends BaseProviderChecker {
 
       // Fallback to basic endpoint check
       const endpointStatus = await this.checkEndpoint('https://status.cloud.google.com/');
-      const apiEndpoint = 'https://generativelanguage.googleapis.com/v1/models';
+      const apiEndpoint = 'https://api-proxy.me/gemini/v1beta/models';
       const apiStatus = await this.checkEndpoint(apiEndpoint);
 
       return {

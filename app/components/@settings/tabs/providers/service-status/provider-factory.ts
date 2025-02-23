@@ -36,7 +36,7 @@ export class ProviderStatusCheckerFactory {
     },
     Google: {
       statusUrl: 'https://status.cloud.google.com/',
-      apiUrl: 'https://generativelanguage.googleapis.com/v1/models',
+      apiUrl: 'https://api-proxy.me/gemini/v1beta/models',
       headers: {},
       testModel: 'gemini-pro',
     },
